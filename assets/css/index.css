@@ -27,6 +27,24 @@
 .foot-active{
     background: lightseagreen;
 }
+@media only screen and (max-width: 600px) {
+    #shop-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #order-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #chat-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #profile-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+}
 #shop-component{
     padding-bottom: 100px;
     display: block;
