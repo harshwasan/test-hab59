@@ -42,7 +42,39 @@
             <li class="list-group-item navigation-items" id="complete">Conpleted Orders <span class="badge badge-primary badge-pill">2</span></li>
             <li class="list-group-item navigation-items" id="accepted">Accepted Orders <span class="badge badge-primary badge-pill">2</span></li>
             <li class="list-group-item navigation-items" id="declined">Declined Orders <span class="badge badge-primary badge-pill">2</span></li>
-        </ul> 
+        </ul>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="media" style="padding-bottom: 10px;">
+                        <img src="assets/media/headphones.jpg" class="align-self-center mr-3" alt="" style="max-width: 20%;">
+                        <div class="media-body">
+                          <h5 class="mt-0">HIFI stereo bluetooth headphones</h5>
+                          <button type="button" class="btn btn-primary" style="background:lightseagreen;">
+                            Quantity <span class="badge badge-light">1</span>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="media" style="padding-bottom: 10px;">
+                        <img src="assets/media/keyboard.jpg" class="align-self-center mr-3" alt="" style="max-width: 20%;">
+                        <div class="media-body">
+                          <h5 class="mt-0">Pro X Keyboard</h5>
+                          <button type="button" class="btn btn-primary" style="background:lightseagreen;">
+                            Quantity <span class="badge badge-light">1</span>
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div> 
         <div class="container" id="pending-component">
             <!-- this section is to be repeated in loop for all orders -->
             <div class="row orders">
@@ -55,7 +87,7 @@
                         <p class="card-text">Cost:Rs. 340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +102,7 @@
                         <p class="card-text">Cost:Rs. 340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +117,7 @@
                         <p class="card-text">Cost:Rs. 340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +132,7 @@
                         <p class="card-text">Cost:Rs. 340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +147,7 @@
                         <p class="card-text">Cost:Rs. 340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +162,7 @@
                         <p class="card-text">Cost:Rs. 1340/-</p>
                         <a href="#" class="card-link">Accept</a>
                         <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link">View Order</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +178,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:4</p>
                         <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
@@ -159,7 +191,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:11</p>
                         <p class="card-text">Cost:Rs. 1340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +207,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:4</p>
                         <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +220,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:11</p>
                         <p class="card-text">Cost:Rs. 1340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
@@ -204,7 +236,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:4</p>
                         <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +249,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
                         <p class="card-text">Items:11</p>
                         <p class="card-text">Cost:Rs. 1340/-</p>
-                        <a href="#" class="card-link">View Order details</a>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order details</a>
                         </div>
                     </div>
                 </div>
