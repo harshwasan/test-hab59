@@ -98,4 +98,6 @@ color: red;
 .order-active{
     background: lightseagreen;
 }
-
+#chat-user{
+    display: none;
+}
