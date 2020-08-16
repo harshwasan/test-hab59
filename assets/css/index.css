@@ -24,6 +24,9 @@
 #profile-component{
     display: none;
 }
+#foot{
+    z-index: 20;
+}
 .container{
     margin-top: 10%;
 }
