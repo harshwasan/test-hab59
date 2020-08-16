@@ -38,3 +38,27 @@ $( "#foot-profile" ).click(function() {
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "block");
 });
+$("#chat-user-1").click(function(){
+    $("#chat-main").slideUp();
+    setTimeout(function () {
+        $("#chat-user").slideDown();
+    }, 1000);
+});
+$("#chat-user-2").click(function(){
+    $("#chat-main").slideUp();
+    setTimeout(function () {
+        $("#chat-user").slideDown();
+    }, 1000);
+});
+$("#chat-user-3").click(function(){
+    $("#chat-main").slideUp();
+    setTimeout(function () {
+        $("#chat-user").slideDown();
+    }, 1000);
+});
+$("#close-chat").click(function(){
+    $("#chat-user").slideUp();
+    setTimeout(function () {
+        $("#chat-main").slideDown();
+    }, 1000);
+});
