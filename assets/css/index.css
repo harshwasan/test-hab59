@@ -1,0 +1,49 @@
+.foot{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+.foot-items{
+    cursor: pointer;
+    width: 100%;
+}
+.foot-active{
+    background: lightseagreen;
+}
+#shop-component{
+    display: block;
+}
+#order-component{
+    display: none;
+}
+#chat-component{
+    display: none;
+}
+#profile-component{
+    display: none;
+}
+.container{
+    margin-top: 10%;
+}
+.necessary{
+color: red;
+}
+.navigation{
+    text-align: center;
+    width: 100%; 
+}
+.navigation-items{
+    font-size: x-small;
+    cursor: pointer;
+    width: 100%;
+}
+.orders{
+    padding-top: 7px;
+    line-height: 5px;
+}
+.order-active{
+    background: lightseagreen;
+}
+

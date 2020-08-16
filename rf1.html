@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-kharidana</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">E-Kharidana</a>
+        <form class="form-inline">
+            <button class="btn btn-sm btn-outline-secondary" type="button" style="color: lightseagreen; border-color: lightseagreen;">Sign in as Customer</button>
+        </form>
+    </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_name">Name<span class="necessary">*</span></label>
+            <input type="text" class="form-control" id="input_name" aria-describedby="name_help">
+            <small id="name_help" class="form-text text-muted">Please enter your Full Name</small>
+            <span id="err_full_name" style="display: none;" class="necessary">Please enter full name</span>
+        </div>
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_Phone">Phone No<span class="necessary">*</span></label>
+            <input type="tel" class="form-control" id="input_Phone" aria-describedby="Phone_help">
+            <small id="Phone_help" class="form-text text-muted">Please enter your Phone No</small>
+            <span id="err_Phone_no" style="display: none;" class="necessary">Please enter Phone no</span>
+        </div>
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_address">Address<span class="necessary">*</span></label>
+            <textarea type="text" class="form-control" id="input_address" rows="3" aria-describedby="address_help"></textarea>
+            <small id="address_help" class="form-text text-muted">Please enter your Home Address</small>
+            <span id="err_address" style="display: none;" class="necessary">Please Enter Address</span>
+        </div>
+      
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_aadhaar_no">Aadhaar no<span class="necessary">*</span></label>
+            <input type="text" class="form-control" id="input_aadhaar_no" aria-describedby="aadhaar_no">
+            <small id="aadhaar_no" class="form-text text-muted">Please enter your aadhaar no</small>
+            <span id="err_aadhaar_no" style="display: none;" class="necessary">Please enter aadhar no</span>
+        </div>
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_pan_no">Pan<span class="necessary">*</span></label>
+            <input type="text" class="form-control" id="input_pan_no" aria-describedby="Pan_help">
+            <small id="Pan_help" class="form-text text-muted">Please enter your Pan no</small>
+            <span id="err_pan_no" style="display: none;" class="necessary">Please enter your pan no</span>
+        </div>
+        <div class="col-sm-12 col-lg-4 form-group">
+            <label for="input_file_liscense">Gumashita liscense/udyoog aadhar<span class="necessary">*</span></label>
+            <input type="file" class="form-control-file" id="input_file_liscense" aria-describedby="form-control-file">
+            <small id="liscense_upload_help" class="form-text text-muted">Please upload your file</small>
+            <span id="err_file_liscense" style="display: none;" class="necessary">Please add a file</span>
+        </div>
+        
+    </div>
+</br>
+    <div class="row" style="justify-content: center;">
+        <input type="button" style=" margin-bottom: 25px;" class="btn btn-sm btn-outline-secondary" value="Next" onclick="check()"  >
+    </div>
+</div>
+
+    <script type="text/javascript" src="assets/js/rf.js"></script>
+</body>
+</html>

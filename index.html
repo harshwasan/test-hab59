@@ -1,96 +1,177 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <script src="https://apis.google.com/js/api:client.js"></script>
-  <script>
-  var googleUser = {};
-  var startApp = function() {
-    gapi.load('auth2', function(){
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: '27130089778-squqs7bjnpas99snkfqbk3ej3gpapr4h.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
-      });
-      attachSignin(document.getElementById('customBtn'));
-    });
-  };
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-kharidana</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">E-Kharidana</a>
+        <form class="form-inline">
+            <button class="btn btn-sm btn-outline-secondary" type="button" style="color: lightseagreen; border-color: lightseagreen;">Sign in as Customer</button>
+        </form>
+    </nav>
 
-  function attachSignin(element) {
-    console.log(element.id);
-    auth2.attachClickHandler(element, {},
-        function(googleUser) {
-          document.getElementById('name').innerText = "Signed in: " +
-              googleUser.getBasicProfile().getName();
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-          // window.location.href='test.html';
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }, function(error) {
-          alert(JSON.stringify(error, undefined, 2));
-        });
-  }
-  </script>
-  <style type="text/css">
-    #gSignInWrapper{
-      text-align:center;
-    }
-    #customBtn {
-      display: inline-block;
-      background: white;
-      color: #444;
-      width: 190px;
-      border-radius: 5px;
-      border: thin solid #888;
-      box-shadow: 1px 1px 1px grey;
-      white-space: nowrap;
-    }
-    #customBtn:hover {
-      cursor: pointer;
-    }
-    span.label {
-      font-family: serif;
-      font-weight: normal;
-    }
-    span.icon {
-      background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-      display: inline-block;
-      vertical-align: middle;
-      width: 42px;
-      height: 42px;
-    }
-    span.buttonText {
-      display: inline-block;
-      vertical-align: middle;
-      padding-left: 42px;
-      padding-right: 42px;
-      top:100px;
-      font-size: 14px;
-      font-weight: bold;
-      /* Use the Roboto font that is loaded in the <head> */
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
-  </head>
-  <body>
-  <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-  <div id="gSignInWrapper">
-    <span class="label">Sign in with:</span>
-    <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
+
+    <!-- Search for inventory component -->
+
+    <!-- <div class="class="form-group" style="text-align: center; left: 50%;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 30vh; left: 50%;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </div> -->
+    
+    <ul class="list-group list-group-horizontal foot">
+        <li class="list-group-item foot-items foot-active" id="foot-shop">Shop</li>
+        <li class="list-group-item foot-items" id="foot-order">Order</li>
+        <li class="list-group-item foot-items" id="foot-chat">Chat</li>
+        <li class="list-group-item foot-items" id="foot-profile">Profile</li>
+    </ul>
+
+    <div id="shop-component">
+        
     </div>
-  </div>
-  <div id="name"></div>
-  <script>startApp();</script>
+    <div id="order-component">
+        <ul class="list-group list-group-horizontal navigation">
+            <li class="list-group-item navigation-items order-active" id="pending">Pending Orders <span class="badge badge-primary badge-pill">2</span></li>
+            <li class="list-group-item navigation-items" id="complete">Conpleted Orders <span class="badge badge-primary badge-pill">2</span></li>
+            <li class="list-group-item navigation-items" id="accepted">Accepted Orders <span class="badge badge-primary badge-pill">2</span></li>
+            <li class="list-group-item navigation-items" id="declined">Declined Orders <span class="badge badge-primary badge-pill">2</span></li>
+        </ul> 
+        <div class="container" id="pending-component">
+            <!-- this section is to be repeated in loop for all orders -->
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders" >
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:11</p>
+                        <p class="card-text">Cost:Rs. 1340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="completed-component">
+            <!-- this section is to be repeated in loop for all orders -->
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders" >
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:11</p>
+                        <p class="card-text">Cost:Rs. 1340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="accepted-component">
+            <!-- this section is to be repeated in loop for all orders -->
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:5</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders" >
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:6</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:11</p>
+                        <p class="card-text">Cost:Rs. 1340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="declined-component">
+            <!-- this section is to be repeated in loop for all orders -->
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:7</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders" >
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:8</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:11</p>
+                        <p class="card-text">Cost:Rs. 1340/-</p>
+                        <a href="#" class="card-link">View Order details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chat-component">
+
+    </div>
+    <div id="profile-component">
+
+    </div>
+
+<script type="text/javascript" src="assets/js/index.js"></script>
+<script type="text/javascript" src="assets/js/orders.js"></script>
 </body>
 </html>
