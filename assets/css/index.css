@@ -1,9 +1,24 @@
+#nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+#order-sub-components{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 56px;
+    width: 100%;
+    z-index: 20;
+}
 .foot{
     position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 .foot-items{
     cursor: pointer;
@@ -13,15 +28,31 @@
     background: lightseagreen;
 }
 #shop-component{
+    padding-bottom: 100px;
     display: block;
 }
 #order-component{
+    padding-bottom: 100px;
     display: none;
 }
 #chat-component{
+    padding-bottom: 100px;
     display: none;
 }
 #profile-component{
+    padding-bottom: 100px;
+    display: none;
+}
+#pending-component{
+    display: block;
+}
+#completed-component{
+    display: none;
+}
+#accepted-component{
+    display: none;
+}
+#declined-component{
     display: none;
 }
 #foot{

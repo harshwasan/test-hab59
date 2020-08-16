@@ -11,7 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark" id="nav">
         <a class="navbar-brand">E-Kharidana</a>
         <form class="form-inline">
             <button class="btn btn-sm btn-outline-secondary" type="button" style="color: lightseagreen; border-color: lightseagreen;">Sign in as Customer</button>
@@ -26,7 +26,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </div> -->
     
-    <ul class="list-group list-group-horizontal foot" id="foot">
+    <ul class="list-group list-group-horizontal foot" id="foot" id="nav">
         <li class="list-group-item foot-items foot-active" id="foot-shop">Shop</li>
         <li class="list-group-item foot-items" id="foot-order">Order</li>
         <li class="list-group-item foot-items" id="foot-chat">Chat</li>
@@ -37,7 +37,7 @@
         
     </div>
     <div id="order-component">
-        <ul class="list-group list-group-horizontal navigation">
+        <ul class="list-group list-group-horizontal navigation" id="order-sub-components">
             <li class="list-group-item navigation-items order-active" id="pending">Pending Orders <span class="badge badge-primary badge-pill">2</span></li>
             <li class="list-group-item navigation-items" id="complete">Conpleted Orders <span class="badge badge-primary badge-pill">2</span></li>
             <li class="list-group-item navigation-items" id="accepted">Accepted Orders <span class="badge badge-primary badge-pill">2</span></li>
@@ -45,6 +45,66 @@
         </ul> 
         <div class="container" id="pending-component">
             <!-- this section is to be repeated in loop for all orders -->
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row orders">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Order No:1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
+                        <p class="card-text">Items:4</p>
+                        <p class="card-text">Cost:Rs. 340/-</p>
+                        <a href="#" class="card-link">Accept</a>
+                        <a href="#" class="card-link">Decline</a>
+                        <a href="#" class="card-link">View Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row orders">
                 <div class="col-sm-12">
                     <div class="card">
