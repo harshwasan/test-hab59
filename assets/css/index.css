@@ -55,23 +55,6 @@ body::-webkit-scrollbar {
     padding-top: 55px;
     display: none;
 }
-@media only screen and (max-width: 600px) {
-    #shop-component{
-        padding-top: 100px;
-        padding-bottom: 70px;
-    }
-    #order-component{
-        padding-top: 100px;
-        padding-bottom: 70px;
-    }
-    #chat-component{
-        padding-top: 50px;
-        padding-bottom: 70px;
-    }
-    #profile-component{
-        padding-bottom: 50px;
-    }
-}
 #pending-component{
     display: block;
 }
@@ -111,4 +94,28 @@ color: red;
 }
 #chat-user{
     display: none;
+}
+.user-image{  
+    max-width: 10%;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+    #shop-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #order-component{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #chat-component{
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    #profile-component{
+        padding-bottom: 50px;
+    }
+    .user-image{
+        max-width: 20%;
+    }
 }
