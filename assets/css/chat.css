@@ -159,8 +159,8 @@
   height: 50px;
   display: inline-block;
   border-radius: 50px;
-  background-color: #a3d063;
-  border: 2px solid #a3d063;
+  background-color: lightseagreen;
+  border: 2px solid lightseagreen;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s linear;
