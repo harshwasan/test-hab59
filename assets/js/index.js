@@ -7,6 +7,8 @@ $( "#foot-shop" ).click(function() {
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "none");
+    // $("#inventory-component").css("display", "block");
+    
 });
 $( "#foot-order" ).click(function() {
     $("#foot-chat").removeClass( "foot-active" );
@@ -17,6 +19,7 @@ $( "#foot-order" ).click(function() {
     $("#order-component").css("display", "block");
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "none");
+    // $("#inventory-component").css("display", "none");
 });
 $( "#foot-chat" ).click(function() {
     $("#foot-shop").removeClass( "foot-active" );
@@ -27,6 +30,7 @@ $( "#foot-chat" ).click(function() {
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "block");
     $("#profile-component").css("display", "none");
+    // $("#inventory-component").css("display", "none");
 });
 $( "#foot-profile" ).click(function() {
     $("#foot-chat").removeClass( "foot-active" );
@@ -37,6 +41,7 @@ $( "#foot-profile" ).click(function() {
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "block");
+    // $("#inventory-component").css("display", "none");
 });
 $("#chat-user-1").click(function(){
     $("#chat-main").slideUp();
@@ -61,4 +66,16 @@ $("#close-chat").click(function(){
     setTimeout(function () {
         $("#chat-main").slideDown();
     }, 1000);
+});
+$("#minus-product").click(function(){
+    let quan = $("#product-quantity").text();
+    let price = $("#product-price").text();
+    $("#product-quantity").text(parseInt(quan)-1);
+    $("#product-price").text(parseInt(price)/2);
+});
+$("#plus-product").click(function(){
+    let quan = $("#product-quantity").text();
+    let price = $("#product-price").text();
+    $("#product-quantity").text(parseInt(quan)+1);
+    $("#product-price").text(parseInt(price)*2);
 });
