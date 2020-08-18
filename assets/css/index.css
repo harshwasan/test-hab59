@@ -108,6 +108,15 @@ color: red;
 #vendor-register{
     display: none;
 }
+#vendor-shop-registration{
+    display: none;
+}
+#vendor-shop-registration-owner-form{
+    display: block;
+}
+#vendor-shop-registration-shop-form{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     #shop-component{
         padding-top: 30px;
@@ -129,5 +138,9 @@ color: red;
     }
     #vendor-login-page{
         padding-top: 50px;
+    }
+    #vendor-shop-registration{
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
