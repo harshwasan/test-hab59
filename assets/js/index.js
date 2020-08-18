@@ -76,14 +76,14 @@ $("#close-chat").click(function(){
     }, 1000);
 });
 $("#minus-product").click(function(){
-    let quan = $("#product-quantity").text();
-    let price = $("#product-price").text();
-    $("#product-quantity").text(parseInt(quan)-1);
-    $("#product-price").text(parseInt(price)/2);
+    let quan = $("#order-product-quantity").text();
+    let price = $("#order-product-price").text();
+    $("#order-product-quantity").text(parseInt(quan)-1);
+    $("#order-product-price").text(parseInt(price)/2);
 });
 $("#plus-product").click(function(){
-    let quan = $("#product-quantity").text();
-    let price = $("#product-price").text();
-    $("#product-quantity").text(parseInt(quan)+1);
-    $("#product-price").text(parseInt(price)*2);
+    let quan = $("#order-product-quantity").text();
+    let price = $("#order-product-price").text();
+    $("#order-product-quantity").text(parseInt(quan)+1);
+    $("#order-product-price").text(parseInt(price)*2);
 });
