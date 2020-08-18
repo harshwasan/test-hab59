@@ -17,14 +17,6 @@ body::-webkit-scrollbar {
     width: 100%;
     z-index: 20;
 }
-#order-sub-components{
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding-top: 56px;
-    width: 100%;
-    z-index: 20;
-}
 .foot{
     position: fixed;
     left: 0;
@@ -70,9 +62,6 @@ body::-webkit-scrollbar {
 #foot{
     z-index: 20;
 }
-.container{
-    margin-top: 10%;
-}
 .necessary{
 color: red;
 }
@@ -85,13 +74,6 @@ color: red;
     cursor: pointer;
     width: 100%;
 }
-.orders{
-    padding-top: 7px;
-    line-height: 5px;
-}
-.order-active{
-    background: lightseagreen;
-}
 #chat-user{
     display: none;
 }
@@ -101,7 +83,7 @@ color: red;
 }
 @media only screen and (max-width: 600px) {
     #shop-component{
-        padding-top: 100px;
+        padding-top: 30px;
         padding-bottom: 70px;
     }
     #order-component{
