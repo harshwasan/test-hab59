@@ -24,11 +24,21 @@ body::-webkit-scrollbar {
     width: 100%;
     text-align: center;
 }
+.login-foot{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center
+}
 .foot-items{
     cursor: pointer;
     width: 100%;
 }
 .foot-active{
+    background: lightseagreen;
+}
+.login-foot-active{
     background: lightseagreen;
 }
 #shop-component{
@@ -60,6 +70,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 #foot{
+    display: none;
+    z-index: 20;
+}
+#login-foot{
+    display: flex;
     z-index: 20;
 }
 .necessary{
@@ -81,6 +96,18 @@ color: red;
     max-width: 10%;
     border-radius: 50%;
 }
+#vendor-login-page{
+    display: block;
+}
+#vendor-dashboard{
+    display: none;
+}
+#vendor-login{
+    display: block;
+}
+#vendor-register{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     #shop-component{
         padding-top: 30px;
@@ -99,5 +126,8 @@ color: red;
     }
     .user-image{
         max-width: 20%;
+    }
+    #vendor-login-page{
+        padding-top: 50px;
     }
 }

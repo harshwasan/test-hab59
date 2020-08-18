@@ -6,9 +6,7 @@ $( "#foot-shop" ).click(function() {
     $("#shop-component").css("display", "block");
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "none");
-    $("#profile-component").css("display", "none");
-    // $("#inventory-component").css("display", "block");
-    
+    $("#profile-component").css("display", "none");  
 });
 $( "#foot-order" ).click(function() {
     $("#foot-chat").removeClass( "foot-active" );
@@ -19,7 +17,6 @@ $( "#foot-order" ).click(function() {
     $("#order-component").css("display", "block");
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "none");
-    // $("#inventory-component").css("display", "none");
 });
 $( "#foot-chat" ).click(function() {
     $("#foot-shop").removeClass( "foot-active" );
@@ -30,7 +27,6 @@ $( "#foot-chat" ).click(function() {
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "block");
     $("#profile-component").css("display", "none");
-    // $("#inventory-component").css("display", "none");
 });
 $( "#foot-profile" ).click(function() {
     $("#foot-chat").removeClass( "foot-active" );
@@ -41,8 +37,20 @@ $( "#foot-profile" ).click(function() {
     $("#order-component").css("display", "none");
     $("#chat-component").css("display", "none");
     $("#profile-component").css("display", "block");
-    // $("#inventory-component").css("display", "none");
 });
+$( "#foot-signin" ).click(function() {
+    $("#foot-signin").addClass( "login-foot-active" );
+    $("#foot-signup").removeClass( "login-foot-active" );
+    $("#vendor-login").css("display", "block");
+    $("#vendor-register").css("display", "none");
+});
+$( "#foot-signup" ).click(function() {
+    $("#foot-signin").removeClass( "login-foot-active" );
+    $("#foot-signup").addClass( "login-foot-active" );
+    $("#vendor-login").css("display", "none");
+    $("#vendor-register").css("display", "block");
+});
+
 $("#chat-user-1").click(function(){
     $("#chat-main").slideUp();
     setTimeout(function () {

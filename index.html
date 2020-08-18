@@ -29,11 +29,132 @@
         <li class="list-group-item foot-items" id="foot-chat">Chats</li>
         <li class="list-group-item foot-items" id="foot-profile">Profile</li>
     </ul>
+    <ul class="list-group list-group-horizontal login-foot" id="login-foot" id="nav">
+        <li class="list-group-item foot-items login-foot-active" id="foot-signin">Sign in</li>
+        <li class="list-group-item foot-items" id="foot-signup">Sign up</li>
+    </ul>
 
+    <div id="vendor-login-page">
+        <div id="vendor-login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="input_product_name">Email<span class="necessary">*</span></label>
+                        <input type="text" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                        <small id="input_pname" class="form-text text-muted">Please enter your Email</small>
+                    </div>
+                </div></br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="input_product_name">Password<span class="necessary">*</span></label>
+                        <input type="password" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                        <small id="input_pname" class="form-text text-muted">Please enter your password</small>
+                    </div>
+                </div></br>
+                <button type="button" class="btn btn-primary" id="login-auth">Sign in</button>
+            </div>
+        </div>
+        <div id="vendor-register">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="input_product_name">Email<span class="necessary">*</span></label>
+                        <input type="text" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                        <small id="input_pname" class="form-text text-muted">Please enter your Email</small>
+                    </div>
+                </div></br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="input_product_name">Password<span class="necessary">*</span></label>
+                        <input type="password" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                        <small id="input_pname" class="form-text text-muted">Please enter your password</small>
+                    </div>
+                </div></br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="input_product_name">Confirm Password<span class="necessary">*</span></label>
+                        <input type="password" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                        <small id="input_pname" class="form-text text-muted">Please Confirm your password</small>
+                    </div>
+                </div></br>
+                <button type="button" class="btn btn-primary">Sign up</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="vendor-dashboard">
     <div id="shop-component">
             <div class="container">
-                <input type="search" id="search-product" placeholder="Searching for a product?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-              <div class="row hidden-md-up" id="test">
+                <div class="modal fade" id="add-new-product" tabindex="-1" aria-labelledby="add-product-label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="add-product-label">Add Product</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_image">Add Product Image<span class="necessary">*</span></label>
+                                    <input type="file" class="form-control-file" id="input_product_image"
+                                        aria-describedby="product_image_help">
+                                    <small id="product_image_help" class="form-text text-muted">Please upload Product Image</small>
+                                </div>
+                            </div></br>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_name">Product Name<span class="necessary">*</span></label>
+                                    <input type="text" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                                    <small id="input_pname" class="form-text text-muted">Please enter Product Name</small>
+                                </div>
+                            </div></br>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_name">Category<span class="necessary">*</span></label>
+                                    <input type="text" class="form-control" id="input_product_name" aria-describedby="input_pname">
+                                    <small id="input_pname" class="form-text text-muted">Please select a Category</small>
+                                </div>
+                            </div></br>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_description">Product Description</label>
+                                    <input type="text" class="form-control" id="input_product_description"
+                                        aria-describedby="Product_description">
+                                    <small id="Product_description" class="form-text text-muted">Please enter Product
+                                        description</small>
+                                </div>
+                            </div></br>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_cost">Product Cost<span class="necessary">*</span></label>
+                                    <input type="number" class="form-control" id="input_product_cost" aria-describedby="input_Product_cost">
+                                    <small id="input_Product_cost" class="form-text text-muted">Please enter Product Cost</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="input_product_cost">Quantity<span class="necessary">*</span></label>
+                                    <input type="number" class="form-control" id="input_product_cost" aria-describedby="input_Product_cost">
+                                    <small id="input_Product_cost" class="form-text text-muted">Please enter Quantity</small>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Add Product</button>
+                          </div>
+                        </div>
+                      </div>
+                </div> 
+                <div class="input-group">
+                    <input type="search" id="search-product" placeholder="Searching for a product?" aria-describedby="add-product" class="form-control border-0 bg-light">
+                    <div class="input-group-append">
+                        <button id="add-product" type="submit" class="btn btn-link text-primary" data-toggle="modal" data-target="#add-new-product"><i class="fa fa-plus">&nbsp; Add a Product</i></button>
+                      </div>
+                </div>
+                <div class="row hidden-md-up" id="test">
 
                 <div class="col-md-4 shop-card-component">
                   <div class="card">
@@ -211,66 +332,6 @@
               </div>
         </div> 
         <div class="container order-nav-container" id="pending-component">
-            <div class="row orders">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Order No:1</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
-                        <p class="card-text">Items:4</p>
-                        <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">Accept</a>
-                        <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row orders">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Order No:1</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
-                        <p class="card-text">Items:4</p>
-                        <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">Accept</a>
-                        <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row orders">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Order No:1</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
-                        <p class="card-text">Items:4</p>
-                        <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">Accept</a>
-                        <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row orders">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">Order No:1</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Order Timestamp:4:00 pm (16/08/2020)</h6>
-                        <p class="card-text">Items:4</p>
-                        <p class="card-text">Cost:Rs. 340/-</p>
-                        <a href="#" class="card-link">Accept</a>
-                        <a href="#" class="card-link">Decline</a>
-                        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal">View Order</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row orders">
                 <div class="col-sm-12">
                     <div class="card">
@@ -479,7 +540,7 @@
                                     <h5>PulseBluMediqa</h5>
                                     <h6>Medical Store</h6>
                                     <!-- <p class="proile-rating">RANKINGS : <span>8/10</span></p> -->
-                                    <button class="btn btn-sm btn-outline-secondary" type="button" style="color: lightcoral; border-color: lightcoral;">Logout</button>
+                                    <button id="logout-auth" class="btn btn-sm btn-outline-secondary" type="button" style="color: lightcoral; border-color: lightcoral;">Logout</button>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#business" role="tab" aria-controls="home" aria-selected="true">Business Details</a>
@@ -499,6 +560,7 @@
                         <div class="profile-work">
                             <p>Business Links</p>
                             <a href="https://akashpawara-portfolio.netlify.app">Visit Website</a><br/>
+                            <a href="https://medium.com/swlh/how-to-build-a-chrome-extension-to-spam-on-whatsapp-using-vanilla-javascript-1c00faa6a2f7">Visit Blog</a><br/>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -609,7 +671,9 @@
             </form>           
         </div>
     </div>
+    </div>
 <script type="text/javascript" src="assets/js/index.js"></script>
+<script type="text/javascript" src="assets/js/auth.js"></script>
 <script type="text/javascript" src="assets/js/shop.js"></script>
 <script type="text/javascript" src="assets/js/orders.js"></script>
 <script type="text/javascript" src="assets/js/chat.js"></script>
