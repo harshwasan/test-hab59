@@ -16,6 +16,7 @@ $( "#next-shop-form" ).click(function() {
 $( "#next-dashboard" ).click(function() {
     $("#vendor-shop-registration-shop-form").css("display", "none");
     $("#foot").css("display", "flex");
+    $("#vendor-shop-registration").css("display","none");
     $("#vendor-dashboard").css("display", "block");
 });
 $( "#logout-auth" ).click(function() {
