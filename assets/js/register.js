@@ -1,9 +1,9 @@
-function check() {
-    debugger;
+function registercheck() {
+    // debugger;
     var u = document.getElementById('input_username');
     var p = document.getElementById('input_password');
     var c = document.getElementById('input_cpassword');
-    var err = document.getElementById('err');
+    var err = document.getElementById('register_err');
     var count = 0;
 
     if (u.value == "" || u.value == undefined || u.value == null) {
@@ -32,8 +32,14 @@ function check() {
     }
     else {
         err.style.display = "none";
-
+        var hu = document.getElementById('hdn_username');
+        var hp = document.getElementById('hdn_password');
         //insert validation and ajax here
+        hu.value= u.value;
+        hp.value=p.value;
+        $("#login-foot").css("display", "none");
+        $("#vendor-login-page").css("display", "none");
+        $("#vendor-shop-registration").css("display", "block");
 
 
     }

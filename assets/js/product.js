@@ -83,8 +83,13 @@ function check() {
 
     }
     else {
+        // function registerVendor() {
+
+
+        // }
         //if validation is correct actions to do
         //window.location="/rf2.html"
+       
     }
 
 }
